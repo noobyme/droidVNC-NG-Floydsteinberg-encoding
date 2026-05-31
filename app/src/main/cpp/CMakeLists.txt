@@ -30,6 +30,7 @@ ExternalProject_Add(ep-libjpeg-turbo
         -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
         -DCMAKE_ASM_FLAGS=${CMAKE_ASM_FLAGS} # as per https://github.com/libjpeg-turbo/libjpeg-turbo/blob/main/BUILDING.md#building-libjpeg-turbo-for-android
         -DENABLE_SHARED=OFF
+        -DCMAKE_MAKE_PROGRAM=${CMAKE_MAKE_PROGRAM}
 )
 # set these variables so FindJPEG can find the library
 ExternalProject_Get_property(ep-libjpeg-turbo INSTALL_DIR)
